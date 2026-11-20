@@ -7,6 +7,10 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const imagePath = product.image.startsWith("/shipyard/")
+    ? product.image
+    : `/shipyard${product.image}`;
+
   return (
     <Link
       href={`/products/${product.id}`}
@@ -14,7 +18,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className="relative aspect-square overflow-hidden bg-gray-100">
         <Image
-          src={product.image}
+          src={imagePath}
           alt={product.name}
           width={600}
           height={600}
