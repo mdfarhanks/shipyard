@@ -7,6 +7,10 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const imagePath = product.image.startsWith("/shipyard/")
+    ? product.image
+    : `/shipyard${product.image}`;
+
   return (
     <Link
       href={`/products/${product.id}`}
@@ -14,10 +18,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className="relative aspect-square overflow-hidden bg-gray-100">
         <Image
-          src={product.image}
+          src={imagePath}
           alt={product.name}
           width={600}
           height={600}
+          priority={product.id === "wave-runner"}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
@@ -29,7 +34,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </span>
 
           {product.featured && (
-            <span className="rounded-full bg-black px-3 py-1 text-xs text-white">
+            <span className="rounded-full bg-black px-3 py-1 text-xs font-medium text-white">
               Featured
             </span>
           )}
@@ -39,7 +44,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.name}
         </h2>
 
-        <p className="mt-2 line-clamp-2 text-sm text-gray-500">
+        <p className="mt-2 line-clamp-2 text-sm text-gray-600">
           {product.description}
         </p>
 
@@ -48,8 +53,8 @@ export default function ProductCard({ product }: ProductCardProps) {
             ${product.price}
           </span>
 
-          <span className="text-sm text-gray-600">
-            ★ {product.rating}
+          <span className="text-sm text-gray-500">
+            ⭐ {product.rating}
           </span>
         </div>
       </div>

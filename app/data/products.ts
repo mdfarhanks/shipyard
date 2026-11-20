@@ -17,7 +17,7 @@ export const products: Product[] = [
     category: "Footwear",
     description:
       "Lightweight sneakers designed for everyday comfort and effortless style.",
-    image: "/products/wave-runner.jpg",
+    image: "/shipyard/products/wave-runner.jpg",
     rating: 4.8,
     featured: true,
   },
@@ -28,7 +28,7 @@ export const products: Product[] = [
     category: "Accessories",
     description:
       "A modern backpack with spacious compartments for your daily essentials.",
-    image: "/products/urban-backpack.jpg",
+    image: "/shipyard/products/urban-backpack.jpg",
     rating: 4.6,
     featured: true,
   },
@@ -39,7 +39,7 @@ export const products: Product[] = [
     category: "Electronics",
     description:
       "Premium wireless headphones with immersive sound and comfortable padding.",
-    image: "/products/cloud-headphones.jpg",
+    image: "/shipyard/products/cloud-headphones.jpg",
     rating: 4.9,
     featured: true,
   },
@@ -50,7 +50,7 @@ export const products: Product[] = [
     category: "Accessories",
     description:
       "A timeless wristwatch that combines minimal design with everyday elegance.",
-    image: "/products/classic-watch.jpg",
+    image: "/shipyard/products/classic-watch.jpg",
     rating: 4.7,
     featured: false,
   },
@@ -61,7 +61,7 @@ export const products: Product[] = [
     category: "Home",
     description:
       "A stylish desk lamp that creates a warm and relaxing atmosphere.",
-    image: "/products/minimal-lamp.jpg",
+    image: "/shipyard/products/minimal-lamp.jpg",
     rating: 4.5,
     featured: false,
   },
@@ -72,7 +72,7 @@ export const products: Product[] = [
     category: "Footwear",
     description:
       "Versatile sneakers built for comfortable everyday adventures.",
-    image: "/products/daily-sneakers.jpg",
+    image: "/shipyard/products/daily-sneakers.jpg",
     rating: 4.6,
     featured: false,
   },
@@ -83,7 +83,7 @@ export const products: Product[] = [
     category: "Lifestyle",
     description:
       "A reusable water bottle made for staying hydrated on the go.",
-    image: "/products/travel-bottle.jpg",
+    image: "/shipyard/products/travel-bottle.jpg",
     rating: 4.4,
     featured: false,
   },
@@ -94,7 +94,7 @@ export const products: Product[] = [
     category: "Accessories",
     description:
       "A compact wallet with a clean design and practical storage.",
-    image: "/products/leather-wallet.jpg",
+    image: "/shipyard/products/leather-wallet.jpg",
     rating: 4.7,
     featured: false,
   },
