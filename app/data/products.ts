@@ -1,4 +1,3 @@
-
 export type Product = {
   id: string;
   name: string;
@@ -16,8 +15,9 @@ export const products: Product[] = [
     name: "Wave Runner",
     price: 129,
     category: "Footwear",
-    description: "Lightweight sneakers designed for everyday comfort and effortless style.",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
+    description:
+      "Lightweight sneakers designed for everyday comfort and effortless style.",
+    image: "/products/wave-runner.jpg",
     rating: 4.8,
     featured: true,
   },
@@ -26,8 +26,9 @@ export const products: Product[] = [
     name: "Urban Backpack",
     price: 89,
     category: "Accessories",
-    description: "A modern backpack with spacious compartments for your daily essentials.",
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600",
+    description:
+      "A modern backpack with spacious compartments for your daily essentials.",
+    image: "/products/urban-backpack.jpg",
     rating: 4.6,
     featured: true,
   },
@@ -36,8 +37,9 @@ export const products: Product[] = [
     name: "Cloud Headphones",
     price: 199,
     category: "Electronics",
-    description: "Premium wireless headphones with immersive sound and comfortable padding.",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+    description:
+      "Premium wireless headphones with immersive sound and comfortable padding.",
+    image: "/products/cloud-headphones.jpg",
     rating: 4.9,
     featured: true,
   },
@@ -46,8 +48,9 @@ export const products: Product[] = [
     name: "Classic Watch",
     price: 159,
     category: "Accessories",
-    description: "A timeless wristwatch that combines minimal design with everyday elegance.",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600",
+    description:
+      "A timeless wristwatch that combines minimal design with everyday elegance.",
+    image: "/products/classic-watch.jpg",
     rating: 4.7,
     featured: false,
   },
@@ -56,8 +59,9 @@ export const products: Product[] = [
     name: "Minimal Lamp",
     price: 75,
     category: "Home",
-    description: "A stylish desk lamp that creates a warm and relaxing atmosphere.",
-    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600",
+    description:
+      "A stylish desk lamp that creates a warm and relaxing atmosphere.",
+    image: "/products/minimal-lamp.jpg",
     rating: 4.5,
     featured: false,
   },
@@ -66,8 +70,9 @@ export const products: Product[] = [
     name: "Daily Sneakers",
     price: 110,
     category: "Footwear",
-    description: "Versatile sneakers built for comfortable everyday adventures.",
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600",
+    description:
+      "Versatile sneakers built for comfortable everyday adventures.",
+    image: "/products/daily-sneakers.jpg",
     rating: 4.6,
     featured: false,
   },
@@ -76,8 +81,9 @@ export const products: Product[] = [
     name: "Travel Bottle",
     price: 35,
     category: "Lifestyle",
-    description: "A reusable water bottle made for staying hydrated on the go.",
-    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600",
+    description:
+      "A reusable water bottle made for staying hydrated on the go.",
+    image: "/products/travel-bottle.jpg",
     rating: 4.4,
     featured: false,
   },
@@ -86,8 +92,9 @@ export const products: Product[] = [
     name: "Leather Wallet",
     price: 65,
     category: "Accessories",
-    description: "A compact wallet with a clean design and practical storage.",
-    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600",
+    description:
+      "A compact wallet with a clean design and practical storage.",
+    image: "/products/leather-wallet.jpg",
     rating: 4.7,
     featured: false,
   },

@@ -1,12 +1,16 @@
-
 import Link from "next/link";
 import { products } from "./data/products";
 import ProductCard from "./components/ProductCard";
 
+export const metadata = {
+  title: "ShipYard | Discover Products Worth Keeping",
+  description:
+    "Explore ShipYard's curated collection of thoughtfully selected products for everyday life.",
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Navigation */}
       <nav className="flex items-center justify-between border-b bg-white px-6 py-5 md:px-12">
         <Link href="/" className="text-2xl font-black tracking-tight">
           Ship<span className="text-blue-600">Yard.</span>
@@ -17,7 +21,6 @@ export default function Home() {
         </span>
       </nav>
 
-      {/* Hero Section */}
       <section className="px-6 py-16 text-center md:py-24">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
           Discover Something New
@@ -35,7 +38,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Product Grid */}
       <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12">
         <div className="mb-8 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-gray-900">
@@ -54,7 +56,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t bg-white px-6 py-8 text-center text-sm text-gray-500">
         © 2026 ShipYard. All rights reserved.
       </footer>
