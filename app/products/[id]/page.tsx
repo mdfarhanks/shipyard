@@ -1,7 +1,8 @@
-
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct, products } from "../../data/products";
+import LazyReviews from "../../components/LazyReviews";
 
 type ProductPageProps = {
   params: Promise<{ id: string }>;
@@ -13,9 +14,24 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function ProductPage({
-  params,
-}: ProductPageProps) {
+export async function generateMetadata({ params }: ProductPageProps) {
+  const { id } = await params;
+  const product = getProduct(id);
+
+  if (!product) {
+    return {
+      title: "Product Not Found | ShipYard",
+      description: "The requested product could not be found.",
+    };
+  }
+
+  return {
+    title: `${product.name} | ShipYard`,
+    description: product.description,
+  };
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = await params;
   const product = getProduct(id);
 
@@ -34,10 +50,12 @@ export default async function ProductPage({
         </Link>
 
         <div className="grid gap-10 rounded-2xl bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
-          <div className="overflow-hidden rounded-xl bg-gray-100">
-            <img
+          <div className="relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+            <Image
               src={product.image}
               alt={product.name}
+              width={800}
+              height={800}
               className="h-full w-full object-cover"
             />
           </div>
@@ -77,6 +95,8 @@ export default async function ProductPage({
             </Link>
           </div>
         </div>
+
+        <LazyReviews />
       </div>
     </main>
   );
